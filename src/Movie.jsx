@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { json, checkStatus } from './utils';
+import { useParams } from "react-router-dom"
 
-const Movie = ({ match }) => {
+const Movie = () => {
+  const params = useParams()
   const [movie, setMovie] = useState(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch(`https://www.omdbapi.com/?i=${match.params.id}&apikey=b7da8d63`)
+    fetch(`https://www.omdbapi.com/?i=${params.id}&apikey=b7da8d63`)
       .then(checkStatus)
       .then(json)
       .then((data) => {
@@ -24,7 +26,7 @@ const Movie = ({ match }) => {
         setError(error.message);
         console.log(error);
       });
-  }, [match.params.id]);
+  }, [params.id]);
 
   if (!movie) {
     return null;
