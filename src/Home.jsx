@@ -38,7 +38,7 @@ const MovieFinder = () => {
       return;
     }
 
-    fetch(`https://www.omdbapi.com/?s=${trimmedSearchTerm}&apikey=b8332752`)
+    fetch(`https://www.omdbapi.com/?s=${trimmedSearchTerm}&apikey=b7da8d63`)
       .then(checkStatus)
       .then(json)
       .then((data) => {

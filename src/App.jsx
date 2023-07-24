@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
-import Home from './Home';
+import MovieFinder from './Home';
 import Movie from './Movie';
 import Header from "./Header";
 
@@ -11,7 +11,7 @@ const NotFound = () => {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Header />}>
-      <Route index element={<Home />} />
+      <Route index element={<MovieFinder />} />
       <Route path="/movie/:id" element={<Movie />} />
       <Route element={<NotFound />} />
     </Route>
