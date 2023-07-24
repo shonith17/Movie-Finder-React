@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import Home from './Home';
 import Movie from './Movie';
-import Header from "./Header"
+import Header from "./Header";
 
 const NotFound = () => {
   return <h2>404 Not Found</h2>;
@@ -16,13 +16,14 @@ const router = createBrowserRouter(
       <Route element={<NotFound />} />
     </Route>
   )
-)
+);
 
-function App({routes}) {
+function App() {
   return (
     <>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </>
   );
 }
 export default App;
+
