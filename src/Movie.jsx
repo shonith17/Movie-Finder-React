@@ -6,7 +6,7 @@ const Movie = ({ match }) => {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch(`https://www.omdbapi.com/?i=${match.params.id}&apikey=b7da8d63`)
+    fetch(`https://www.omdbapi.com/?i=${match.params.id}&apikey=b8332752`)
       .then(checkStatus)
       .then(json)
       .then((data) => {
