@@ -15,7 +15,7 @@ const router = createBrowserRouter(
       <Route path="/movie/:id" element={<Movie />} />
       <Route element={<NotFound />} />
     </Route>
-  ), { basename: import.meta.env.DEV ? '/' : '/Movie-Finder-React/' }
+  )
 );
 
 function App() {
