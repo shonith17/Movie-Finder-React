@@ -1,15 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ command }) => {
-  const config = {
-    plugins: [react()],
-    base: '/',
-  }
-
-  if (command !== 'serve') {
-    config.base = '/Movie-Finder-React/'
-  }
-
-  return config
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()]
 })
